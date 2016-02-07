@@ -1,0 +1,25 @@
+/*
+* style override for chrome
+*/
+
+
+.finder .inputbox{
+	width: 453px;
+}
+
+.finder .button{
+	width: 90px;
+}
+
+.finder img{
+	left: 76px;
+}
+
+#peetform textarea{
+	width: 96%;
+	height: 150px;
+}
+
+.ah_wrapper{
+    top: -125px;
+}

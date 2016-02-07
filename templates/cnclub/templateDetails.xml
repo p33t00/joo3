@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="2.5" type="template" client="site">
+	<name>CN Club</name>
+	<creationDate>23.08.2015</creationDate>
+	<author>p33t</author>
+	<authorEmail>nomail@hotmail.com</authorEmail>
+	<authorUrl>nowebsite</authorUrl>
+	<copyright>Copyright (C) 2005 - 2014 Peet.</copyright>
+	<license>no license</license>
+	<version>2.5.0</version>
+	<description>Site for Club of Czeslaw Niemen</description>
+
+	<files>
+		<folder>css</folder>
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+	</files>
+
+	<positions>
+		<position>header</position>
+		<position>Main-Menu</position>
+		<position>bread-cramps</position>
+		<position>mid-top</position>
+		<position>mid-bottom</position>
+		<position>footer</position>
+	</positions>
+</extension>
