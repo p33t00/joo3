@@ -99,7 +99,7 @@ body{
   .ah_wrapper{
     position: absolute;
     left: 667px;
-    top: -105px;
+    top: -85px;
     width: 580px;
   }
 
@@ -141,16 +141,11 @@ body{
 
  
   .main-menu li a:hover{
-    color: #7d7d7e;
+    color: #7d7d7e !important;
     border-top: 5px solid #7d7d7e;
   }
 
   .current a{
-    border-top: 5px solid red;
-    color: red !important;
-  }
-
-  .active a{
     border-top: 5px solid red;
     color: red !important;
   }
@@ -645,7 +640,7 @@ button, .button{
   background: url(../images/band-video-bg.jpg) repeat-y;
 }
 
-.components .item-page p+p{
+.components .item-page p{
   padding:0;
   text-align: center;
   margin: 35px 0;
@@ -655,6 +650,9 @@ iframe {
   margin: 100px auto;
   display: block;
   text-align: center;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -2px black;
 }
 
                       /* System Messages */

@@ -56,7 +56,7 @@ class JConfig {
 	public $feed_limit = '10';
 	public $log_path = 'C:\\xampp\\htdocs\\Joo3/logs';
 	public $tmp_path = 'C:\\xampp\\htdocs\\Joo3/tmp';
-	public $lifetime = '15';
+	public $lifetime = '60';
 	public $session_handler = 'database';
 	public $memcache_persist = '1';
 	public $memcache_compress = '0';

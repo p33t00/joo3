@@ -97,9 +97,9 @@ class SimpleImageGalleryHelper {
 			// Check if thumb image exists already
 			$thumbimage = $cacheFolderPath.DS.$prefix.$gal_id.'_'.strtolower(self::cleanThumbName($thumbfilename));
 
-			if (4>5 && file_exists($thumbimage) && is_readable($thumbimage) && (filemtime($thumbimage) + $cache_expire_time) > time())
+			if (file_exists($thumbimage) && is_readable($thumbimage) && (filemtime($thumbimage) + $cache_expire_time) > time())
 			{
-				// do nothing
+				list($thb_width, $thb_height) = getimagesize($thumbimage);
 			}
 			else
 			{
@@ -137,17 +137,21 @@ class SimpleImageGalleryHelper {
 				}
 
 				// calculate thumbnails
-				echo "$width, $height, $thb_width, $thb_height, $smartResize";
-				$thumbnail = self::thumbDimCalc($width, $height, $thb_width, $thb_height, $smartResize);
+				
+				//$thumbnail = self::thumbDimCalc($width, $height, $thb_width, $thb_height, $smartResize);
 
-				$thumb_width = $thumbnail['width'];
-				$thumb_height = $thumbnail['height'];
+				$filePath = $sitePath.$srcimgfolder.$filename;
+
+				$thumbnail = self::_getPropDims($filePath, $thb_width, $thb_height);
+
+				$thb_width = $thumbnail['width'];
+				$thb_height = $thumbnail['height'];
 
 				// create an image resource for the thumbnail
-				$thumb = imagecreatetruecolor($thumb_width, $thumb_height);
+				$thumb = imagecreatetruecolor($thb_width, $thb_height);
 
 				// create the resized copy
-				imagecopyresampled($thumb, $source, 0, 0, 0, 0, $thumb_width, $thumb_height, $width, $height);
+				imagecopyresampled($thumb, $source, 0, 0, 0, 0, $thb_width, $thb_height, $width, $height);
 
 				// convert and save all thumbs to .jpg
 				$success = imagejpeg($thumb, $thumbimage, $jpg_quality);
@@ -170,7 +174,6 @@ class SimpleImageGalleryHelper {
 			$gallery[$key]->height = $thb_height;
 
 		}// foreach loop
-
 		// OUTPUT
 		return $gallery;
 
@@ -283,7 +286,7 @@ class SimpleImageGalleryHelper {
 		$thumbnail = array();
 		$thumbnail['width'] = round($thumb_width);
 		$thumbnail['height'] = round($thumb_height);
-echo '<pre>'; echo var_dump($thumbnail); echo'</pre>'; exit;
+
 		return $thumbnail;
 
 	}
@@ -349,6 +352,11 @@ echo '<pre>'; echo var_dump($thumbnail); echo'</pre>'; exit;
 		$source_html = array(' ', ',');
 		$replacement_html = array('_', '_');
 		return str_replace($source_html, $replacement_html, $text_to_parse);
+	}
+
+	private function _getPropDims($img, $dest_w, $dest_h)
+	{
+		return PeetLibThmbmaker::mkThbm($img, $dest_w, $dest_h);
 	}
 
 } // End class

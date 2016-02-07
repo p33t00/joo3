@@ -7,7 +7,8 @@ class PeetLibThmbmaker
 	static private $allowed_ext = array(
 		".jpeg",
 		".gif",
-		".jpg"
+		".jpg",
+		".png"
 		);
 	static private $imgInstance;
 
@@ -32,19 +33,14 @@ class PeetLibThmbmaker
 
 	private function getDims($img, $dest_w, $dest_h){
 		$i = self::getImgInstance($img);
-		$dims = array();
 
-		if (($w = $i->getWidth()) > ($h = $i->getHeight()) && $w !== $dest_w){
-			$dims['width'] = $dest_w;
-			$dims['height'] = round($h / ($w / $dest_w));
-		}
-		else if($w < $h && $h !== $dest_h){
-			$dims['height'] = $dest_h;
-			$dims['width'] = round($w / ($h / $dest_h));
-		}
-		else if($w == $h){								// этот оператор не нужен т.к условия проверяются выше
+		if(($w = $i->getWidth()) == ($h = $i->getHeight())){
 			$dims['height'] = $dims['width'] = $dest_h;
 		}
+
+		$dims['height'] = $dest_h;
+		$dims['width'] = round($w / ($h / $dest_h));
+
 		return $dims;
 	}
 
