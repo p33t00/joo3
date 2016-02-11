@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fieldset name="peetform" addrulepath="components/com_peetcontact/models/rules">
+
+		<field name="first_name"
+			type="text"
+			id="form-name"
+			size="33"
+			label="COM_PEETCONTACT_PEETCONTACT_MESSAGE_NAME"
+			filter="string"
+			required="true"
+		/>
+
+		<field name="last_name"
+			type="text"
+			id="form-last"
+			size="33"
+			label="COM_PEETCONTACT_PEETCONTACT_MESSAGE_LAST_NAME"
+			filter="string"
+		/>
+
+		<field name="email"
+			type="email"
+			id="form-email"
+			size="39"
+			label="COM_PEETCONTACT_PEETCONTACT_MESSAGE_EMAIL"
+			filter="email"
+			required="true"
+		/>
+
+		<field name="phone"
+			type="tel"
+			id="form-phone"
+			size="27"
+			label="COM_PEETCONTACT_PEETCONTACT_MESSAGE_PHONE"
+			validate="phone"
+		/>
+
+		<field name="message"
+			type="textarea"
+			cols="60"
+			rows="8"
+			id="form-message"
+			label="COM_PEETCONTACT_PEETCONTACT_MESSAGE_MESSAGE"
+			filter="htmlsafe"
+			required="true"
+		/>
+
+		<field
+			name="captcha"
+			type="captcha"
+			label="COM_CONTACT_CAPTCHA_LABEL"
+			description="COM_CONTACT_CAPTCHA_DESC"
+			validate="captcha"
+			namespace="contact"
+		/>
+	</fieldset>
+</form>

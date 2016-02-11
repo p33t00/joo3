@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="details">
+		<field
+			name="name"
+			type="text"
+			label="COM_PEETCONTACT_FIELD_CONTACT_NAME_LABEL"
+			description="COM_PEETCONTACT_FIELD_CONTACT_NAME_DESC"
+			required="false" />
+
+		<field
+			name="last_name"
+			type="text"
+			label="COM_PEETCONTACT_FIELD_CONTACT_LAST_LABEL"
+			description="COM_PEETCONTACT_FIELD_CONTACT_LAST_DESC"
+			required="false" />
+
+		<field
+			name="tel_01"
+			type="text"
+			label="COM_PEETCONTACT_FIELD_TEL_LABEL"
+			description="COM_PEETCONTACT_FIELD_TEL_DESC"
+			required="false" />
+
+		<field
+			name="tel_02"
+			type="text"
+			label="COM_PEETCONTACT_FIELD_TEL_LABEL"
+			description="COM_PEETCONTACT_FIELD_TEL_DESC"
+			required="false" />
+
+		<field
+			name="fax"
+			type="text"
+			label="COM_PEETCONTACT_FIELD_FAX_LABEL"
+			description="COM_PEETCONTACT_FIELD_FAX_DESC"
+			required="false" />
+			
+		<field
+			name="email"
+			type="text"
+			label="COM_PEETCONTACT_FIELD_EMAIL_LABEL"
+			description="COM_PEETCONTACT_FIELD_EMAIL_DESC"
+			required="false" />
+
+		<field
+			name="social01"
+			type="text"
+			label="COM_PEETCONTACT_FIELD_SOCIAL_LABEL"
+			description="COM_PEETCONTACT_FIELD_SOCIAL_DESC"
+			required="false" />
+
+		<field
+			name="social02"
+			type="text"
+			label="COM_PEETCONTACT_FIELD_SOCIAL_LABEL"
+			description="COM_PEETCONTACT_FIELD_SOCIAL_DESC"
+			required="false" />
+	</fieldset>
+
+<fields name="params">
+	<fieldset name="contact-params"
+		label="COM_PEETCONTACT_SLIDER_CONTACT_DETAILS_LABEL">
+		
+		<field name="show_contact_name"
+			type="radio"
+			default="0"
+			description="COM_CONTACT_FIELD_CONTACT_SHOW_LIST_DESC"
+			label="COM_PEETCONTACT_FIELD_CONTACT_NAME_LABEL"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_contact_last"
+			type="radio"
+			default="0"
+			description="COM_CONTACT_FIELD_CONTACT_SHOW_LIST_DESC"
+			label="COM_PEETCONTACT_FIELD_CONTACT_LAST_LABEL"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_contact_tel_01"
+			type="radio"
+			default="0"
+			description="COM_CONTACT_FIELD_CONTACT_SHOW_LIST_DESC"
+			label="COM_PEETCONTACT_FIELD_TEL_LABEL"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_contact_tel_02"
+			type="radio"
+			default="0"
+			description="COM_CONTACT_FIELD_CONTACT_SHOW_LIST_DESC"
+			label="COM_PEETCONTACT_FIELD_TEL_LABEL"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_contact_fax"
+			type="radio"
+			default="0"
+			description="COM_CONTACT_FIELD_CONTACT_SHOW_LIST_DESC"
+			label="COM_PEETCONTACT_FIELD_FAX_LABEL"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_contact_email"
+			type="radio"
+			default="0"
+			description="COM_CONTACT_FIELD_CONTACT_SHOW_LIST_DESC"
+			label="COM_PEETCONTACT_FIELD_EMAIL_LABEL"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_contact_social_01"
+			type="radio"
+			default="0"
+			description="COM_PEETCONTACT_FIELD_SOCIAL_LABEL_DESC"
+			label="COM_PEETCONTACT_FIELD_SOCIAL_LABEL"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_contact_social_02"
+			type="radio"
+			default="0"
+			description="COM_PEETCONTACT_FIELD_SOCIAL_LABEL_DESC"
+			label="COM_PEETCONTACT_FIELD_SOCIAL_LABEL"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+	</fieldset>
+
+	<fieldset name="contact-form-fieldset"
+		label="COM_PEETCONTACT_FIELD_SHOW_CONTACT_FORM">
+		<field name="show_contact_form"
+			type="radio"
+			default="0"
+			description="COM_PEETCONTACT_FIELD_SHOW_CONTACT_FORM_DESC"
+			label="COM_PEETCONTACT_FIELD_SHOW_CONTACT_FORM"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="send_email"
+			type="radio"
+			default="0"
+			description="COM_PEETCONTACT_FIELD_SEND_EMAIL_DESC"
+			label="COM_PEETCONTACT_FIELD_SEND_EMAIL_FORM"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field name="email_address"
+			type="text"
+			default=""
+			description="COM_PEETCONTACT_FIELD_EMAIL_ADDRESS_DESC"
+			label="COM_PEETCONTACT_FIELD_EMAIL_ADDRESS"
+		>
+		</field>
+
+	</fieldset>
+</fields>
+</form>

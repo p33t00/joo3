@@ -138,7 +138,7 @@ class SimpleImageGalleryHelper {
 
 				// calculate thumbnails
 				
-				//$thumbnail = self::thumbDimCalc($width, $height, $thb_width, $thb_height, $smartResize);
+//$thumbnail = self::thumbDimCalc($width, $height, $thb_width, $thb_height, $smartResize);
 
 				$filePath = $sitePath.$srcimgfolder.$filename;
 
