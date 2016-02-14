@@ -7,12 +7,12 @@ JHtml::_('behavior.tooltip');
 JHtml::_('behavior.formvalidation');
 ?>
 
-<form action="<?php echo JRoute::_('index.php?option=com_peetcontact'); ?>" method="post" name="adminForm" id="message-form" class="form-validate">
+<form action="<?php echo JRoute::_('index.php?option=com_peetcontact'); ?>" method="post" name="adminForm" id="adminForm" class="form-validate">
 	
 	<div class="form-horizontal">
-	<?php echo JHtml::_('bootstrap.startTabSet', 'myTab', array('active' => 'details')); ?>
+	<?php echo JHtml::_('bootstrap.startTabSet', 'myTab', array('active' => 'cont-info')); ?>
 
-	<?php echo JHtml::_('bootstrap.addTab', 'myTab', 'details', JText::_('COM_PEETCONTACT_CONTACT_EDIT')); ?>
+	<?php echo JHtml::_('bootstrap.addTab', 'myTab', 'cont-info', JText::_('COM_PEETCONTACT_CONTACT_EDIT')); ?>
 		<div class="row-fluid">
 			<div class="span9">
 				<div class="row-fluid form-horizontal-desktop">
@@ -31,40 +31,34 @@ JHtml::_('behavior.formvalidation');
 		</div>
 	<?php echo JHtml::_('bootstrap.endTab'); ?>
 
-	<?php echo JHtml::_('bootstrap.addTab', 'myTab', 'display', 'Display settings'); ?>
+	<?php echo JHtml::_('bootstrap.addTab', 'myTab', 'display', JText::_('COM_PEETCONTACT_FIELD_DISPLAY_SETTINGS')); ?>
 		<div class="row-fluid">
 			<div class="span9">
 				<div class="row-fluid form-horizontal-desktop">
 					<div class="span6">
-						<?php	$fieldSets = $this->form->getFieldsets('params');
-							foreach ($fieldSets as $name => $fieldSet){
-								echo '<pre>'; echo var_dump($this->form); echo'</pre>'; exit;
-							}
-						?>
+						<?php echo $this->form->renderFieldset('contact-params'); ?>
 					</div>
 				</div>
 			</div>
 		</div>
 	<?php echo JHtml::_('bootstrap.endTab'); ?>
 	
-	<?php echo JHtml::_('bootstrap.addTab', 'myTab', 'content', 'Content'); ?>
+	<?php echo JHtml::_('bootstrap.addTab', 'myTab', 'form-settings', JText::_('COM_PEETCONTACT_FIELD_FORM_SETTINGS')); ?>
 		<div class="row-fluid">
 			<div class="span9">
 				<div class="row-fluid form-horizontal-desktop">
 					<div class="span6">
-						<?php foreach ($this->form->getFieldset($name) as $field)
-							{
-								echo $this->form->renderField($field->name);
-							} 
-						?>
+						<?php echo $this->form->renderFieldset('contact-form-display'); ?>
 					</div>
 				</div>
 			</div>
 		</div>
 	<?php echo JHtml::_('bootstrap.endTab'); ?>
 
+	<?php echo JHtml::_('bootstrap.endTabSet'); ?>
+	</div>
+	
 	<input type="hidden" name="task" value="" />
 	<?php echo JHtml::_('form.token'); ?>
-	</div>
 </form>
 

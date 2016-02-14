@@ -62,7 +62,8 @@
 	<fieldset name="contact-params"
 		label="COM_PEETCONTACT_SLIDER_CONTACT_DETAILS_LABEL">
 		
-		<field name="show_contact_name"
+		<field 
+			name="show_contact_name"
 			type="radio"
 			default="0"
 			description="COM_CONTACT_FIELD_CONTACT_SHOW_LIST_DESC"
@@ -72,7 +73,8 @@
 			<option value="1">JSHOW</option>
 		</field>
 
-		<field name="show_contact_last"
+		<field 
+			name="show_contact_last"
 			type="radio"
 			default="0"
 			description="COM_CONTACT_FIELD_CONTACT_SHOW_LIST_DESC"
@@ -82,7 +84,8 @@
 			<option value="1">JSHOW</option>
 		</field>
 
-		<field name="show_contact_tel_01"
+		<field 
+			name="show_contact_tel_01"
 			type="radio"
 			default="0"
 			description="COM_CONTACT_FIELD_CONTACT_SHOW_LIST_DESC"
@@ -92,7 +95,8 @@
 			<option value="1">JSHOW</option>
 		</field>
 
-		<field name="show_contact_tel_02"
+		<field 
+			name="show_contact_tel_02"
 			type="radio"
 			default="0"
 			description="COM_CONTACT_FIELD_CONTACT_SHOW_LIST_DESC"
@@ -102,7 +106,8 @@
 			<option value="1">JSHOW</option>
 		</field>
 
-		<field name="show_contact_fax"
+		<field 
+			name="show_contact_fax"
 			type="radio"
 			default="0"
 			description="COM_CONTACT_FIELD_CONTACT_SHOW_LIST_DESC"
@@ -112,7 +117,8 @@
 			<option value="1">JSHOW</option>
 		</field>
 
-		<field name="show_contact_email"
+		<field 
+			name="show_contact_email"
 			type="radio"
 			default="0"
 			description="COM_CONTACT_FIELD_CONTACT_SHOW_LIST_DESC"
@@ -122,7 +128,8 @@
 			<option value="1">JSHOW</option>
 		</field>
 
-		<field name="show_contact_social_01"
+		<field 
+			name="show_contact_social_01"
 			type="radio"
 			default="0"
 			description="COM_PEETCONTACT_FIELD_SOCIAL_LABEL_DESC"
@@ -132,7 +139,8 @@
 			<option value="1">JSHOW</option>
 		</field>
 
-		<field name="show_contact_social_02"
+		<field 
+			name="show_contact_social_02"
 			type="radio"
 			default="0"
 			description="COM_PEETCONTACT_FIELD_SOCIAL_LABEL_DESC"
@@ -143,9 +151,11 @@
 		</field>
 	</fieldset>
 
-	<fieldset name="contact-form-fieldset"
+	<fieldset name="contact-form-display"
 		label="COM_PEETCONTACT_FIELD_SHOW_CONTACT_FORM">
-		<field name="show_contact_form"
+
+		<field 
+			name="show_contact_form"
 			type="radio"
 			default="0"
 			description="COM_PEETCONTACT_FIELD_SHOW_CONTACT_FORM_DESC"
@@ -155,7 +165,8 @@
 			<option value="1">JSHOW</option>
 		</field>
 
-		<field name="send_email"
+		<field 
+			name="send_email"
 			type="radio"
 			default="0"
 			description="COM_PEETCONTACT_FIELD_SEND_EMAIL_DESC"
@@ -165,7 +176,8 @@
 			<option value="1">JYES</option>
 		</field>
 
-		<field name="email_address"
+		<field 
+			name="email_address"
 			type="text"
 			default=""
 			description="COM_PEETCONTACT_FIELD_EMAIL_ADDRESS_DESC"

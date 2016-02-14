@@ -29,7 +29,7 @@ class PeetcontactViewPeetcontact extends JViewLegacy{
 		$this->items = $this->get('Item');
 		$this->params = $this->items->params;
 		$this->form = $this->get('Form');
-		 
+
 		parent::display($tpl);
 	}
 }

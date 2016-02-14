@@ -29,7 +29,6 @@ class PeetcontactModelPeetcontact extends JModelForm
 	public function getItem()
 	{
 		$db = $this->getDbo();
-		echo '<pre>'; echo var_dump($db); echo'</pre>'; exit;
 		$query = $db->getQuery(true);
 		$query->select('*');
 		$query->from('#__peetcontact');
