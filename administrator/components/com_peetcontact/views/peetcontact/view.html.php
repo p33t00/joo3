@@ -42,8 +42,8 @@ class PeetcontactViewPeetcontact extends JViewLegacy{
 	* 	Method for displaying a message
 	*	Uses JModelForm::getItem();
 	*/
-	public function showMess(){
-
+	public function showMess()
+	{
 		$model = $this->getModel();
 		$this->itm = $model->getItem(JRequest::getInt('id'));
 
@@ -51,9 +51,10 @@ class PeetcontactViewPeetcontact extends JViewLegacy{
 		parent::display('message');
 	}
 
-	protected function addToolbar(){
+	protected function addToolbar()
+	{
 		JRequest::getWord('layout') ?
-		JToolBarHelper::cancel('peetcontact.cancel') :
+		JToolBarHelper::cancel() :
 		JToolBarHelper::deleteList('','peetcontact.delete');
 	}
 }

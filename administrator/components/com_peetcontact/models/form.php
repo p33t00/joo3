@@ -170,6 +170,5 @@ class PeetcontactModelForm extends JModelAdmin
 
 		return $condition;
 	}
-
 	
 }

@@ -29,6 +29,7 @@ class PeetcontactModelPeetcontact extends JModelForm
 	public function getItem()
 	{
 		$db = $this->getDbo();
+		echo '<pre>'; echo var_dump($db); echo'</pre>'; exit;
 		$query = $db->getQuery(true);
 		$query->select('*');
 		$query->from('#__peetcontact');
@@ -45,10 +46,6 @@ class PeetcontactModelPeetcontact extends JModelForm
 		return $data;
 	}
 
-
-
-
-
 	public function populateState(){
 
 		$app = JFactory::getApplication('Site');
@@ -57,8 +54,6 @@ class PeetcontactModelPeetcontact extends JModelForm
 		$params = $app->getParams();
 		$this->setState('params', $params);
 	}
-
-
 
 	public function save($data)
 	{
@@ -69,8 +64,6 @@ class PeetcontactModelPeetcontact extends JModelForm
 		$db = JFactory::getDbo();
 		$query = $db->getQuery(true);
 		
-//		$query = "INSERT INTO #__peet_messages (message_id, first_name, last_name, email, phone, message) VALUES (NULL, 'sssss', 'aaaaa', 'asdasdasd', '2213213', 'ferewfrewrew')";
-
    		$query->insert($db->quoteName('#__peet_messages'));
     	$query->columns($db->quoteName($cols));
     		
@@ -95,32 +88,6 @@ class PeetcontactModelPeetcontact extends JModelForm
     		JError::raiseError("Error", $db->stderr());
     	}
 	}
-
-	/**
-	 * Method to auto-populate the model state.
-	 *
-	 * Note. Calling getState in this method will result in recursion.
-	 *
-	 * @since	1.6
-	 */
-/*	protected function populateState()
-	{
-		$app = JFactory::getApplication('site');
-
-		// Load state from the request.
-		$pk = JRequest::getInt('id');
-		$this->setState('contact.id', $pk);
-
-		// Load the parameters.
-		$params = $app->getParams();
-		$this->setState('params', $params);
-
-		$user = JFactory::getUser();
-		if ((!$user->authorise('core.edit.state', 'com_contact')) &&  (!$user->authorise('core.edit', 'com_contact'))){
-			$this->setState('filter.published', 1);
-			$this->setState('filter.archived', 2);
-		}
-	}*/
 
 	/**
 	 * Method to get the contact form.

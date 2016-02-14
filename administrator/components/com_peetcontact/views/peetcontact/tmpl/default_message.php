@@ -6,7 +6,7 @@ JHtml::_('behavior.formvalidator');
 JHtml::_('behavior.keepalive');
 JHtml::_('formbehavior.chosen', 'select');
 ?>
-<form action="<?php echo JRoute::_('index.php?option=com_peetcontact'); ?>" method="post" name="adminForm" id="message-form" class="form-validate">
+<form action="<?php echo JRoute::_('index.php?option=com_peetcontact'); ?>" method="post" name="adminForm" id="adminForm" class="form-validate">
 	<table class='adminlist'>
 		<tr>
 			<td width="1"><b>

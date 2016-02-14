@@ -35,15 +35,18 @@ class PeetcontactControllerPeetcontact extends JControllerForm
 	*/
 
 	public function getModel($name = 'Form', $prefix = 'PeetcontactModel', $config = array('ignore_request' => true))
+	//public function getModel($name = 'Admin', $prefix = '', $config = array('ignore_request' => true))
 	{
 		$model = parent::getModel($name, $prefix, $config);
 		return $model;
 	}
 
-public function cancel()
-{
-	echo "foo"; exit;
-}
+	function delete()
+	{
+		$model = $this->getModel();
+		$model->delete(JRequest::getVar('cid'));
+		$this->setRedirect(JRoute::_('index.php?option=com_peetcontact', false));
+	}
 
 	/**
 	 * Method override to check if you can edit an existing record.
