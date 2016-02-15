@@ -53,25 +53,27 @@ body{
 *breadcrumbs
 */
 
-.breadCramps{
-  width: 100%;
-  display: inline-block;
-}
-
-.breadcrumbs{
-  float: left;
+.breadcrumb{
   font-size: 9px;
   letter-spacing: 1px;
   font-weight: bold;
-  color: #b4b6d9;
-  display: inline-block;
+  padding: 0;
+  margin: 0;
 }
 
-.pathway{
+.breadcrumb li:first-child::before{
+  content: "|";
+}
+
+.breadcrumb li{
+  display: inline;
+}
+
+.breadcrumb li span{
   color: #b4b6d9;
 }
 
-.breadcrumbs span{
+.breadcrumb .active span{
   color: #7d7d7e;
 }
 
@@ -91,7 +93,6 @@ body{
     background-repeat: no-repeat;
     border-bottom: 1px solid #b4b6d9;
   }
-
 
 /*
 * Active menu item title

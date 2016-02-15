@@ -58,7 +58,7 @@ class PeetcontactControllerPeetcontact extends JControllerForm
 		}
 		
 		// Save data in DB
-		$model->save($data);
+//		$model->save($data);
 
 		$adminEmail = $this->getParams()->get('email_address');
 
