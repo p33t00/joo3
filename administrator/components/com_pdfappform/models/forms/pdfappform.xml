@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fieldset name="pdfappform">
+
+		<field name="id"
+			type="text"
+			label="JGLOBAL_FIELD_ID_LABEL"
+			description="JGLOBAL_FIELD_ID_DESC"
+			size="10"
+			default="0"
+			readonly="true"
+			class="readonly"
+		/>
+		
+		<field name="first_name"
+			type="text"
+			id="form-name"
+			size="33"
+			label="COM_PDFAPPFORM_MESSAGE_NAME"
+			filter="string"
+		/>
+
+		<field name="last_name"
+			type="text"
+			id="form-last"
+			size="33"
+			label="COM_PDFAPPFORM_MESSAGE_LAST_NAME"
+			filter="string"
+		/>
+
+		<field name="email"
+			type="email"
+			id="form-email"
+			size="39"
+			label="COM_PDFAPPFORM_MESSAGE_MESSAGE_EMAIL"
+			filter="email"
+		/>
+
+		<field name="phone"
+			type="tel"
+			id="form-phone"
+			size="27"
+			label="COM_PDFAPPFORM_MESSAGE_MESSAGE_PHONE"
+		/>
+	</fieldset>
+</form>

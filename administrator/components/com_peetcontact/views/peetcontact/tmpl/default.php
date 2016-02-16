@@ -31,28 +31,12 @@ JHtml::_('formbehavior.chosen', 'select');
 		<?php echo $this->loadTemplate('foot');?>
 	</table>
 
-	<div>
-		<input type="hidden" name="task" value="" />
-		<input type="hidden" name="boxchecked" value="0" />
-		<input type="hidden" name="filter_order" value="<?php echo $this->sortColumn; ?>" />
-		<input type="hidden" name="filter_order_Dir" value="<?php echo $this->sortDirection; ?>" />
-		<?php echo JHtml::_('form.token'); ?>
-	</div>
-
-	
-	</div>
-
-
-</form>
-
-
-<!--
-<fieldset id="filter-bar">
-		<div class="filter-search fltlft">
-			<label class="filter-search-lbl" for="filter_search"><?php echo JText::_('JSEARCH_FILTER_LABEL'); ?></label>
-			<input type="text" name="filter_search" id="filter_search" value="<?php echo $this->escape($this->state->get('filter.search')); ?>" title="<?php echo JText::_('COM_WEBLINKS_SEARCH_IN_TITLE'); ?>" />
-			<button type="submit"><?php echo JText::_('JSEARCH_FILTER_SUBMIT'); ?></button>
-			<button type="button" onclick="document.id('filter_search').value='';this.form.submit();"><?php echo JText::_('JSEARCH_FILTER_CLEAR'); ?></button>
+		<div>
+			<input type="hidden" name="task" value="" />
+			<input type="hidden" name="boxchecked" value="0" />
+			<input type="hidden" name="filter_order" value="<?php echo $this->sortColumn; ?>" />
+			<input type="hidden" name="filter_order_Dir" value="<?php echo $this->sortDirection; ?>" />
+			<?php echo JHtml::_('form.token'); ?>
 		</div>
-	</fieldset>
--->
+	</div>
+</form>

@@ -1,0 +1,20 @@
+/*
+* styling for PDF Application Form Component
+*/
+
+#pdfappform dl{
+  width: 510px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #dcdcdc;
+}
+
+h3{
+	line-height: 2em;
+	display: table-cell;
+	width: 1280px;
+	text-align: center;
+	vertical-align: middle;
+	height: 350px;
+}

@@ -42,40 +42,4 @@ class PeetcontactHelper
 			JToolBarHelper::title(JText::_(sprintf(JText::_('COM_PEETCONTACT'), JText::_($name))));
 		
 	}
-
-	/**
-	 * Gets a list of the actions that can be performed.
-	 *
-	 * @param	int		The category ID.
-	 * @param	int		The contact ID.
-	 *
-	 * @return	JObject
-	 * @since	1.6
-	 */
-	public static function getActions($categoryId = 0, $contactId = 0)
-	{
-		$user	= JFactory::getUser();
-		$result	= new JObject;
-
-		if (empty($contactId) && empty($categoryId)) {
-			$assetName = 'com_contact';
-			$level = 'component';
-		}
-		elseif (empty($contactId)) {
-			$assetName = 'com_contact.category.'.(int) $categoryId;
-			$level = 'category';
-		}
-		else {
-			$assetName = 'com_contact.contact.'.(int) $contactId;
-			$level = 'category';
-		}
-
-		$actions = JAccess::getActions('com_contact', $level);
-
-		foreach ($actions as $action) {
-			$result->set($action->name,	$user->authorise($action->name, $assetName));
-		}
-
-		return $result;
-	}
 }

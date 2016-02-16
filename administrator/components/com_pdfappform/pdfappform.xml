@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3" method="upgrade">
+	<name>com_pdfappform</name>
+	<author>Peet</author>
+	<creationDate>December 2015</creationDate>
+	<copyright>(C) 2005 - 2022 Open Source Matters. All rights reserved.
+	</copyright>
+	<license>No license Dude</license>
+	<authorEmail>Can't get in touch</authorEmail>
+	<authorUrl>www.ppp.com</authorUrl>
+	<version>0.0.2</version>
+	<description>COM_PDFAPPFORM_XML_DESCRIPTION</description>
+
+<!-- Запускается при установке -->
+<install>
+	<sql>
+		<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+	</sql>
+</install>
+<!-- Запускается при удалении -->
+<uninstall>
+	<sql>
+		<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+	</sql>
+</uninstall>
+<!-- Запускается при обновлении -->
+<update>
+	<schemas>
+		<schemapath type="mysql">sql/updates/mysql</schemapath>
+	</schemas>
+</update>
+
+	<files folder="site">
+		<folder>controllers</folder>
+		<folder>css</folder>
+		<folder>js</folder>
+		<folder>language</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+		<filename>controller.php</filename>
+		<filename>pdfappform.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="site">
+		<language tag="en-GB">language/en-GB/en-GB.com_pdfappform.ini</language>
+	</languages>
+
+	<administration>
+		<menu img="class:contact">com_pdfappform</menu>
+		<files folder="admin">
+			<filename>controller.php</filename>
+			<filename>pdfappform.php</filename>
+			<filename>index.html</filename>
+			<folder>tables</folder>
+			<folder>models</folder>
+			<folder>views</folder>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>language</folder>
+			<folder>sql</folder>
+		</files>
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB/en-GB.com_pdfappform.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_pdfappform.sys.ini</language>
+		</languages>
+	</administration>
+</extension>
+
