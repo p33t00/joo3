@@ -27,8 +27,6 @@ class PdfappformHelper extends JHelperContent
 	 */
 	public static function addSubmenu($vName)
 	{
-//echo get_parent_class('PdfappformHelper'); echo 'Foo'; exit;
-
 		JHtmlSidebar::addEntry(
 			JText::_('COM_PDFAPPFORM_SUBMENU_MESSAGES'),
 			'index.php?option=com_pdfappform',
@@ -42,6 +40,6 @@ class PdfappformHelper extends JHelperContent
 
 		$name = ($vName=='pdfappform') ? JText::_('COM_PDFAPPFROM_SUBMENU_MESSAGES') : JText::_('COM_PDFAPPFROM_SUBMENU_SETTINGS');
 
-			JToolBarHelper::title(JText::_(sprintf(JText::_('COM_PDFAPPFORM'), JText::_($name))));
+		JToolBarHelper::title(JText::_(sprintf(JText::_('COM_PDFAPPFORM'), JText::_($name))));
 	}
 }

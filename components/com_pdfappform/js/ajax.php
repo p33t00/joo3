@@ -1,5 +1,4 @@
 <?php
-
 define( '_JEXEC', 1 );
 // defining the base path.
 if (stristr( $_SERVER['SERVER_SOFTWARE'], 'win32' )) 

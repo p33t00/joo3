@@ -33,9 +33,9 @@ class PdfappformViewPdfappform extends JViewLegacy{
 		$this->sortColumn = $this->state->get('list.ordering');
 
 		PdfappformHelper::addSubmenu('pdfappform');
+		$this->sidebar = JHtmlSidebar::render();
 
 		$this->addToolbar();
-		echo JHtmlSidebar::render();				// Buggy thing here !!!
 
 		parent::display($tpl);
 	}

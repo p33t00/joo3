@@ -10,6 +10,12 @@ JHtml::_('behavior.formvalidation');
 
 <form action="<?php echo JRoute::_('index.php?option=com_pdfappform'); ?>" method="post" name="adminForm" id="adminForm" class="form-validate">
 
+	<!-- renders a sidebar -->
+	<div id="j-sidebar-container" class="span2">
+	    <?php echo $this->sidebar; ?>
+	</div>
+	
+	<!-- renders Main container -->
 	<div id="j-main-container">
 			<div id="filter-bar" class="btn-toolbar">
 				<div class="filter-search btn-group pull-left">

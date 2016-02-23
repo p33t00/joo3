@@ -24,7 +24,7 @@ body{
   }
 
   a:hover{
-    color: red !important;
+    color: red;
   }
 
   li{

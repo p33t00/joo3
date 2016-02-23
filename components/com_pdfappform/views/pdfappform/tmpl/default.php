@@ -29,7 +29,7 @@ JHtml::_('behavior.formvalidation');
 			</div>
 		</div>
 			<dt></dt>
-			<dd><button class="button validate" type="submit"><?php echo JText::_('COM_PEETCONTACT_PEETCONTACT_MESSAGE_SUBMIT'); ?></button>
+			<dd><button class="button validate" type="submit"><?php echo JText::_('COM_PDFAPPFORM_MESSAGE_SUBMIT'); ?></button>
 		</dl>
 			<dd><input type="hidden" name="option" value="com_pdfappform" />		
 				<input type="hidden" name="task" value="pdfappform.confirm" />

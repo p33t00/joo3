@@ -16,6 +16,6 @@ $path = $controller->get('basePath');
 // The default path is 'media/system/css/'
 JHtml::stylesheet(substr($path, (strpos($path, 'comp'))).'/css/style.css');
 
-$controller->execute(JRequest::getCmd('task'));
+$controller->execute(JFactory::getApplication()->input->get('task'));
 $controller->redirect();
 ?>

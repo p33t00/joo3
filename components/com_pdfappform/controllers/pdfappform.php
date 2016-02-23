@@ -24,8 +24,8 @@ class PdfappformControllerPdfappform extends JControllerForm
 		JSession::checkToken() or jexit(JText::_('JINVALID_TOKEN'));
 
 		// Get the data from POST
-		$data = JRequest::getVar('jform', array(), 'post', 'array');
-		
+		$data = $app->input->post->get('jform', array(), 'ARRAY');
+
 		// Save the data in the session.
 		$app->setUserState('com_pdfappform.data', $data);
 

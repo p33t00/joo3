@@ -17,7 +17,6 @@ class PdfappformController extends JControllerLegacy{
 
 	public function display($cachable = false, $urlparams = array())
 	{
-		PdfappformHelper::addSubmenu($this->input->get('view', 'contacts'));
 		parent::display($cachable);
 	}
 }
