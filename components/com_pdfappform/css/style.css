@@ -6,9 +6,19 @@
 	text-align: center;
 }
 
-.components .button a::hover{
-	color: white !important;
-	background-color: navy;
+.pdf-app-form{
+	height: 470px;
+	width: 1280px;
+	display: table;
+}
+
+#pdfappform{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.success-wrap .button:hover{
+	color: #f2f2f2 !important;
 }
 
 .components:last-child:hover{
@@ -17,6 +27,18 @@
 
 .success-wrap{
 	display: inline-block;
+}
+
+.pdfLinkContainer p{
+	display: inline;
+}
+
+.pdfLinkContainer a{
+	color: #b4b6d9;
+}
+
+.pdfLinkContainer img{
+	vertical-align: middle;
 }
 
 #pdfappform dl{
@@ -32,6 +54,10 @@ h5{
 	display: block;
 	background-color: red;
 	font-size: 18px;
+}
+
+h5:hover{
+	background-color: #d60000;
 }
 
 h3{

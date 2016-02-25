@@ -4,6 +4,7 @@ defined('_JEXEC') or die('Restricted access');
 JHtml::_('behavior.tooltip');
 JHtml::_('behavior.formvalidation');
 ?>
+<div class="pdf-app-form">
 	<form method="post" id="pdfappform" name="pdfappform" class="form-validate">
 		<dl>
 			<p>
@@ -16,3 +17,4 @@ JHtml::_('behavior.formvalidation');
 			<?php echo JHtml::_( 'form.token' ); ?>
 		</dl>
 	</form>
+</div>
